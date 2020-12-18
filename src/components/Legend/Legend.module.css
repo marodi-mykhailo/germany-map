@@ -1,0 +1,30 @@
+.wrapp{
+
+}
+
+.colorWrapp {
+    display: flex;
+    margin: 20px;
+}
+
+.colorBox {
+    height: 20px;
+    width: 30px;
+    border: 1px solid black;
+    margin: 0 2px 5px;
+}
+
+.legende {
+    margin-right: 15px;
+  font-size: 20px;
+}
+
+
+.legendNum{
+    padding-top: 5px;
+}
+
+.title{
+    max-height: max-content;
+}
+
