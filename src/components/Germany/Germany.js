@@ -1,8 +1,10 @@
 import React from 'react';
 import {GeoJSON, MapContainer} from "react-leaflet";
 import germanyDis from '../../assets/dist.geo.json'
+import goverment from '../../assets/goverment.geo.json'
 import Legend from "../Legend/Legend";
 import s from './Germany.module.css'
+import HamburgRheilandMapColored from "../HamburgRheilandMapColored/HamburgRheilandMapColored";
 
 const gradient = {
     "3.0": "#DEF2FA",
@@ -20,7 +22,7 @@ const gradient = {
     "6.5": "#80000B",
 }
 
-const testArr = [3, 3.25, 3.5, 3.75, 4, 4.25, 4.5, 5, 5.25, 5.5, 5.75, 6.5]
+const testArr = [3.0, 3.25, 3.5, 3.75, 4, 4.25, 4.5, 5, 5.25, 5.5, 5.75, 6.5]
 
 const Germany = () => {
 
@@ -37,18 +39,30 @@ const Germany = () => {
         }
     }
 
+    const statement = (item) => {
+        return (item.properties.NAME_1 === "Rheinland-Pfalz") || (item.id === 177)
+    }
 
     return (
         <div className={s.wrapp}>
-            <MapContainer center={[51.165691, 10.451526]} zoom={6}>
-                <GeoJSON center={[51.165691, 10.451526]} zoom={6}
-                         style={setColor}
-                         data={germanyDis}
-                         onEachFeature={onEachCountry}
-                />
-            </MapContainer>
-            <Legend arr={gradient}/>
+
+            {/*<MapContainer center={[51.165691, 10.451526]} zoom={6}>*/}
+            {/*    <GeoJSON center={[51.165691, 10.451526]} zoom={6}*/}
+            {/*             style={setColor}*/}
+            {/*             data={germanyDis}*/}
+            {/*             onEachFeature={onEachCountry}*/}
+            {/*    />*/}
+            {/*</MapContainer>*/}
+            {/*<Legend arr={gradient}/>*/}
+
+            {/* ---------------------------------------------- */}
+            {/*<HamburgRheilandMapColored typ={"Rheinland"} isColored={true}/>*/}
+            {/*<HamburgRheilandMapColored isColored={true}/>*/}
+            <HamburgRheilandMapColored />
+            {/* ---------------------------------------------- */}
+
         </div>
+
     );
 };
 

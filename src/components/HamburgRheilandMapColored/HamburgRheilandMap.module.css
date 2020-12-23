@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.wrapp{
+}
+
+.toolTip{
+    background: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    box-shadow: none;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.toolTip:before{
+    display: none;
+}
