@@ -56,9 +56,9 @@ const Germany = () => {
             {/*<Legend arr={gradient}/>*/}
 
             {/* ---------------------------------------------- */}
-            {/*<HamburgRheilandMapColored typ={"Rheinland"} isColored={true}/>*/}
+            <HamburgRheilandMapColored typ={"Rheinland"} isColored={true}/>
             {/*<HamburgRheilandMapColored isColored={true}/>*/}
-            <HamburgRheilandMapColored />
+            {/*<HamburgRheilandMapColored />*/}
             {/* ---------------------------------------------- */}
 
         </div>

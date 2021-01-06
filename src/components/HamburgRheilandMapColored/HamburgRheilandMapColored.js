@@ -44,6 +44,7 @@ const HamburgRheilandMapColored = ({typ, isColored}) => {
 
     const onEachCountry = (item, layer,) => {
 
+
         if (typ === "Rheinland") {
             layer.options.color = "transparent"
 
@@ -67,6 +68,15 @@ const HamburgRheilandMapColored = ({typ, isColored}) => {
 
         if (item.properties.ID_1 === 11) {
             if (isColored) {
+                layer.on({
+                    click: (event) => {
+                        event.target.setStyle({
+                            color: 'black',
+                            weight: 1.5
+                        })
+                        event.target.bringToFront()
+                    }
+                })
                 item.properties.testN = testArr[Math.floor(Math.random() * testArr.length)]
                 layer.options.fillColor = gradient[item.properties.testN]
                 layer.options.color = "#5B839B"
